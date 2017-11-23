@@ -12,5 +12,12 @@ public class Triangulo {
 		this.puntoC = new Punto (puntoC.getX(), puntoC.getY());
 	}
 
+	@Override
+	public String toString() {
+		return "Triangulo [puntoA=" + puntoA + ", puntoB=" + puntoB + ", puntoC=" + puntoC + "]";
+	}
+	
+	
+
 
 }
