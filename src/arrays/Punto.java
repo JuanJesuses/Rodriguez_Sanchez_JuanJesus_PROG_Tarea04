@@ -22,5 +22,11 @@ public class Punto {
 	public String toString() {
 		return "Punto [x=" + x + ", y=" + y + "]";
 	}
+	
+	public double distancia (Punto otroPunto) {
+			
+		double totalDistancia = Math.sqrt(Math.pow(x - otroPunto.x, 2) + Math.pow(y - otroPunto.y, 2));
+		return totalDistancia;
+	}
 
 }
