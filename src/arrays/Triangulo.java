@@ -18,7 +18,7 @@ public class Triangulo {
 	}
 	
 	public double perimetro() {
-		double perimetro = puntoA.distancia(puntoB) + puntoA.distancia(puntoC) + puntoC.distancia(puntoC);
+		double perimetro = puntoA.distancia(puntoB) + puntoA.distancia(puntoC) + puntoB.distancia(puntoC);
 		return perimetro;
 	}
 
