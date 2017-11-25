@@ -9,6 +9,7 @@ public class Principal {
 		
 		int numeroTriangulos;
 		Triangulo[] arrayDeTriangulos;
+		double perimetro=0, perimetroMedio=0;
 		
 		
 		System.out.println("Introduce el número de triágulos que quieres crear: ");
@@ -16,12 +17,20 @@ public class Principal {
 		arrayDeTriangulos = new Triangulo[numeroTriangulos];
 		
 		
-		for(int i=0; i<arrayDeTriangulos.length-1; i++) {
-			Punto verticeA = new Punto((int) Math.random()*100, (int) Math.random()*100);
-			Punto verticeB = new Punto((int) Math.random()*100, (int) Math.random()*100);
-			Punto verticeC = new Punto((int) Math.random()*100, (int) Math.random()*100);
+		for(int i=0; i<arrayDeTriangulos.length; i++) {
+			Punto verticeA = new Punto((double) Math.random()*100, (double) Math.random()*100);
+			Punto verticeB = new Punto((double) Math.random()*100, (double) Math.random()*100);
+			Punto verticeC = new Punto((double) Math.random()*100, (double) Math.random()*100);
 			arrayDeTriangulos[i]= new Triangulo (verticeA, verticeB, verticeC);
 		}
+		
+		for(int i=0; i<arrayDeTriangulos.length; i++) {
+			perimetro = perimetro + arrayDeTriangulos[i].perimetro();
+			System.out.println(perimetro);
+		}
+		
+		perimetroMedio=(int)perimetro/numeroTriangulos;
+		System.out.printf("El perímetro medio de los triángulos es: %.2f", perimetroMedio);
 		
 	}
 
