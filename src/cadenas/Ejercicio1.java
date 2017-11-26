@@ -1,13 +1,17 @@
 package cadenas;
 
 import utilidades.Entrada;
-
+/*
+ * Programa que pide una palabra por teclado y dice
+ * si es panvocálica o no.
+ */
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
 		
 		String palabra;
 		char continua;
+		//Contadores de vocales
 		int contadorA=0;
 		int contadorE=0;
 		int contadorI=0;
@@ -17,7 +21,10 @@ public class Ejercicio1 {
 		do {
 			System.out.println("Introduce una palabra para saber si es panvocálica o no: ");
 			palabra = Entrada.cadena();
-			
+			/*
+			 * Con este bucle recorremos la cadena y con el switch
+			 * actualizamos los contadores.
+			 */
 			for(int i=0; i<palabra.length(); i++) {
 				switch(palabra.charAt(i)) {
 					case 'a':
